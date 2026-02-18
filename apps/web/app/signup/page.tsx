@@ -20,14 +20,14 @@ export default function SignUpPage() {
 
   return (
     <div className="flex min-h-screen bg-[#0a1033]">
+            <div className="w-full lg:w-1/2 flex items-center justify-center p-8 lg:p-16  bg-[#101322]">
+              <div className="">
+                          <AuthToggle activeTab="signup" />
+                <SignUpForm className="bg-[#101322]" />
+              </div>
+            </div>
       <RightPanel avatars={avatars.map((src: string) => ({ src }))} />
-
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-8 lg:p-16 bg-[#101322]">
-        <div className="w-full max-w-md">
-                      <AuthToggle activeTab="signup" />
-          <SignUpForm  onSubmit={handleSignUp} onOAuth={handleOAuth} />
-        </div>
-      </div>
+      
     </div>
   );
 }

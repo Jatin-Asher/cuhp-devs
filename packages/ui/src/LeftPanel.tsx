@@ -22,7 +22,7 @@ export function LeftPanel({
   studentCount = 2000
 }: LeftPanelProps): ReactNode {
  return (
-    <div className={`hidden lg:flex w-1/2 relative overflow-hidden bg-[#0a1033] ${className}`}>
+    <div className={`hidden lg:flex w-1/2 relative overflow-hidden bg-[#101322] ${className}`}>
       {/* Subtle gradient background */}
       <div
         className="absolute inset-0"
