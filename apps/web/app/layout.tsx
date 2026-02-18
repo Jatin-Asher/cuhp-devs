@@ -23,9 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <style>@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap')</style>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-      {/* <link href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"/> */}
+
         {children}
       </body>
     </html>

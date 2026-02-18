@@ -165,7 +165,7 @@ export function SignUpForm({
       
       {/* Header */}
       <div>
-        <h2 className="text-5xl font-bold tracking-tight text-white">
+        <h2 className="text-3xl font-bold tracking-tight text-white">
           Create Your Account
         </h2>
         <p className="text-slate-400 mt-3 text-lg">

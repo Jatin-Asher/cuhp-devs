@@ -1,4 +1,7 @@
 import React from "react";
+import { BiTerminal } from "react-icons/bi";
+import { MdHub } from "react-icons/md";
+import { CgBolt } from "react-icons/cg";
 
 
 interface RightPanelProps {
@@ -11,9 +14,9 @@ interface RightPanelProps {
 
 
 const ACTION_CARDS = [
-  { icon: "terminal", label: "Compile", color: "#1337ec" },
-  { icon: "hub", label: "Connect", color: "#8b5cf6" },
-  { icon: "bolt", label: "Deploy", color: "#22d3ee" },
+  { icon: <BiTerminal className="text-blue-500" />, label: "Compile", color: "#1337ec" },
+  { icon: <MdHub className="text-purple-500" />, label: "Connect", color: "#8b5cf6" },
+  { icon: <CgBolt className="text-yellow-400" />, label: "Deploy", color: "#fbbf24" },
 ] as const;
 
 export function RightPanel({
@@ -68,8 +71,7 @@ export function RightPanel({
                 {/* Action cards grid */}
                 <div className="grid grid-cols-3 gap-6 my-10">
                   {ACTION_CARDS.map(({ icon, label, color }) => (
-                    <div
-                      key={icon}
+                    <div key = {color}
                       className="h-32 rounded-xl flex flex-col items-center justify-center gap-2"
                       style={{
                         backgroundColor: `${color}1a`,
@@ -102,12 +104,16 @@ export function RightPanel({
       <div className="relative z-10 p-16 flex flex-col justify-between h-full w-full">
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-blue-600/40">
-            <span className="material-icons text-white text-xl">lan</span>
+          <div className="w-11 h-11 bg-blue-600 rounded-lg flex items-center justify-center">
+            <svg 
+              viewBox="0 0 24 24" 
+              className="w-6 h-6 text-white"
+              fill="currentColor"
+            >
+              <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 10H7V9h5v3zm5 0h-5V9h5v3z"/>
+            </svg>
           </div>
-          <span className="text-2xl font-bold tracking-tighter text-white uppercase">
-            CS Portal
-          </span>
+          <span className="text-white text-2xl font-bold tracking-tight uppercase">CS Portal</span>
         </div>
 
         {/* Hero text */}
