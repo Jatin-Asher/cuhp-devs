@@ -1,6 +1,6 @@
 "use client";
 
-import avatars from "../assets/page";
+import avatars from "../assets/assets";
 import { LeftPanel } from "@repo/ui/sign-in/LeftPanel";
 import { SignInForm } from "@repo/ui/sign-in/SignInForm";
 import { AuthToggle } from "@repo/ui/toogle/AuthToggle";
@@ -12,7 +12,7 @@ export default function SignInPage() {
     console.log("Sign in submitted");
   };
   const handleOAuth = (provider: "google" | "github") => {
-     // TODO: Implement your OAuth logic here
+    // TODO: Implement your OAuth logic here
     // Example: await signIn(provider);
     console.log("OAuth sign-up with:", provider);
   };
@@ -23,7 +23,7 @@ export default function SignInPage() {
 
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8 lg:p-16  bg-[#101322]">
         <div className="">
-                    <AuthToggle activeTab="signin" />
+          <AuthToggle activeTab="signin" />
           <SignInForm className="bg-[#101322]" />
         </div>
       </div>
