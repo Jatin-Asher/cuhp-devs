@@ -1,9 +1,9 @@
 "use client";
 
 import avatars from "../assets/page";
-import { SignInForm } from "@repo/ui/SignInForm";
-import { LeftPanel } from "@repo/ui/LeftPanel";
-import { AuthToggle } from "@repo/ui/AuthToggle";
+import { LeftPanel } from "@repo/ui/sign-in/LeftPanel";
+import { SignInForm } from "@repo/ui/sign-in/SignInForm";
+import { AuthToggle } from "@repo/ui/toogle/AuthToggle";
 
 export default function SignInPage() {
   const handleSignIn = (e: any) => {

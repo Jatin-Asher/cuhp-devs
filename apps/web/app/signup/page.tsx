@@ -1,9 +1,9 @@
 "use client";
 
 import avatars from "../assets/page";
-import { SignUpForm } from "@repo/ui/SignUpForm";
-import { RightPanel } from "@repo/ui/RightPanel";
-import { AuthToggle } from "@repo/ui/AuthToggle";
+import { SignUpForm } from "@repo/ui/sign-up/SignUpForm";
+import { RightPanel } from "@repo/ui/sign-up/RightPanel";
+import { AuthToggle } from "@repo/ui/toogle/AuthToggle";
 
 export default function SignUpPage() {
   const handleSignUp = async (fields: any) => {

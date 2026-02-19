@@ -14,13 +14,14 @@
 
 html,
 body {
+  font-family: 'Space Grotesk', sans-serif;
   max-width: 100vw;
   overflow-x: hidden;
+  background:  rgba(59, 130, 246, 0.2);
+
 }
 
-body {
-  font-family: 'Space Grotesk', sans-serif;
-}
+
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
