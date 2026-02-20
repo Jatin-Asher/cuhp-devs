@@ -2,18 +2,20 @@ import { Request, Response } from "express";
 import bcrypt from "bcrypt";
 import { User } from "@repo/db/index.js";
 import { signToken } from "../utils";
+import { signupSchema } from "../validators/auth.schema"
 
 export const signup = async (req: Request, res: Response) => {
   try {
-    const { fullName, email, studentId, password } = req.body;
+    const parsed = signupSchema.safeParse(req.body);
 
-    if (!fullName || !email || !password) {
-      return res.status(400).json({ message: "All fields are required" });
+    if (!parsed.success) {
+      return res.status(400).json({
+        message: "Validation failed",
+        errors: parsed.error.flatten().fieldErrors,
+      });
     }
 
-    if(!email.endsWith("@gmail.com")){
-        return res.status(400).json({ message: "Email must be a valid Gmail address" });
-    }
+    const { fullName, email, studentId, password } = parsed.data;
 
     if(password.length <8){
         return res.status(400).json({
